@@ -10,14 +10,14 @@ const ToolProduct = () => {
     }
     return (
         <div>
-            <h1 className='text-[4vw] text-center font-bold '>STOCK COLLECTION</h1>
+            <h1 className='sm:text-[4vw] md:text-3xl text-center font-bold my-3 '>HAMMER COLLECTION</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 sm:gird-cols-2 justify-items-center gap-8'>
 
                 {
                     tools.map(tool => {
                         return (
 
-                            <div key={tool._id} className="card w-96 bg-base-100 shadow-xl">
+                            <div key={tool._id} className="card w-96 bg-base-100 shadow-xl my-3">
                                 <h2 className="card-title justify-center">{tool.name}</h2>
                                 <figure className="px-10 pt-10">
                                     <img src={tool.image} alt="Shoes" className="rounded-xl" />
