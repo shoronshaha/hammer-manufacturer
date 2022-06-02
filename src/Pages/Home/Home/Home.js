@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Carousel from '../Carousel/Carousel';
 import Summary from '../Summary/Summary';
+import Testimonial from '../Testimonials/Testimonial';
 import ToolProduct from '../ToolProduct/ToolProduct';
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             <ToolProduct></ToolProduct>
             <Carousel></Carousel>
             <Summary></Summary>
+            <Testimonial></Testimonial>
         </div>
     );
 };
