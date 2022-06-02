@@ -51,18 +51,22 @@ const MyProfile = () => {
                             } alt="userPhoto" />
                         </div>
                     </div>
-                    <button onClick={handleEditProfile} class="btn btn-outline btn-primary uppercase my-3">Edit Profile</button>
-                </div>
-                <div class="divider lg:divider-horizontal"></div>
-                <div class="grid card rounded-box place-items-center">
-                    <p className="font-bold">Your Email:{authUser?.email}</p>
-                    <p className="font-bold text-start">Your Name:   {authUser?.displayName
+
+                    <p className="font-bold text-start"> Name:   {authUser?.displayName
                         ? authUser?.displayName
                         : user?.displayName
                             ? user?.displayName
                             : "N/A"}</p>
-                    <p className="font-bold">Your Address:{user?.address}</p>
-                    <p className="font-bold">Phone Number:{user?.phoneNumber}</p>
+                    <button onClick={handleEditProfile} class="btn btn-outline btn-primary uppercase my-3">Edit Profile</button>
+                </div>
+                <div class="divider lg:divider-horizontal"></div>
+                <div class="grid card rounded-box place-items-center">
+                    <h1 className="text-center font-bold text-2xl uppercase" > Bio data</h1>
+                    <div className="mt-[-50px]">
+                        <p className="font-bold">Your Email:{authUser?.email}</p>
+                        <p className="font-bold">Your Address:{user?.address}</p>
+                        <p className="font-bold">Phone Number:{user?.phoneNumber}</p>
+                    </div>
                 </div>
             </div>
         </div>
