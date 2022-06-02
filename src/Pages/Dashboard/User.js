@@ -4,6 +4,7 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 
+
 const Users = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
@@ -15,30 +16,31 @@ const Users = () => {
         return <Loading></Loading>
     }
     return (
-        <div>
+        <div className="lg:m-15 md:m-10 relative overflow-x-auto shadow-md sm:rounded-lg">
             <h2 className="text-2xl">All Users: {users.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            users.map(user => <UserRow
-                                key={user._id}
-                                user={user}
-                                refetch={refetch}
-                            ></UserRow>)
-                        }
-                    </tbody>
-                </table>
-            </div>
+
+            <table className="w-full text-sm text-left text-gray-500 dark:text-black ">
+                <thead className="text-xs text-black uppercase bg-gray-50 dark:bg-black dark:text-white px-6 py-4">
+                    <tr>
+                        <th>NO</th>
+                        <th>Name</th>
+                        <th>Job</th>
+                        <th>Favorite Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        users.map((user, index) => <UserRow
+                            key={user._id}
+                            user={user}
+                            index={index}
+                            refetch={refetch}
+                        ></UserRow>)
+                    }
+                </tbody>
+            </table>
         </div>
+
     );
 };
 

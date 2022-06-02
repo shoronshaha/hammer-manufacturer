@@ -1,9 +1,9 @@
-import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import icon from '../../Images/icons/delete.png'
 
 const MyOrder = () => {
     const [user] = useAuthState(auth)
@@ -31,45 +31,79 @@ const MyOrder = () => {
                     setOrders(data);
                 });
         }
-    }, [user])
+    }, [user]);
 
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/allOrder/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining);
+                })
+
+        }
+    }
     return (
-        <div>
+        <div className="lg:m-15 md:m-10 relative overflow-x-auto shadow-md sm:rounded-lg">
             <h2>My Orders: {orders.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Image</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Payment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders.map((order, index) => <tr key={order._Id}>
-                                <th>{index + 1}</th>
-                                <td>{order.productName}</td>
-                                <td>{order.productImage}</td>
-                                <td>{order.quantity}</td>
-                                <td>{order.price}</td>
-                                <td>
-                                    {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(order.price && order.paid) && <div>
-                                        <p><span className='text-success'>Paid</span></p>
-                                        <p>Transaction id: <span className='text-success'>{order.orderId}</span></p>
-                                    </div>}
-                                </td>
-                            </tr>)
-                        }
+            <table className="w-full text-sm text-left text-gray-500 dark:text-black ">
+                <thead className="text-xs text-black uppercase bg-gray-50 dark:bg-black dark:text-white">
+                    <tr>
+                        <th scope="col" className="px-6 py-3">
+                            Name
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Quantity
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Price
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            <span >Delete</span>
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            <span >Payment</span>
+                        </th>
 
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        orders.map((order, index) => {
+                            return (
+                                <tr key={order._id} className="bg-white border-b dark:bg-orange-200 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-black-900 dark:text-black whitespace-nowrap">
+                                        {order.productName}
+                                    </th>
+                                    <td className="px-6 py-4">
+                                        {order.quantity}
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        {order.price}
+                                    </td>
+                                    <td className="px-2 py-2">
+                                        <button onClick={() => handleDelete(order._id)}> <img src={icon} alt="Delete the Item" /></button>
+                                    </td>
 
-                    </tbody>
-                </table>
-            </div>
+                                    <td>
+                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                        {(order.price && order.paid) && <div>
+                                            <p><span className='text-success'>Paid</span></p>
+                                            <p>Transaction id: <span className='text-success'>{order.orderId}</span></p>
+                                        </div>}
+                                    </td>
+                                </tr>
+                            )
+                        })
+                    }
+
+                </tbody>
+            </table>
         </div>
     );
 };
