@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Carousel from '../Carousel/Carousel';
+import Summary from '../Summary/Summary';
 import ToolProduct from '../ToolProduct/ToolProduct';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <ToolProduct></ToolProduct>
             <Carousel></Carousel>
+            <Summary></Summary>
         </div>
     );
 };
