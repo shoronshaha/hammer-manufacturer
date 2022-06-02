@@ -6,6 +6,7 @@ import './App.css';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageAllOrders from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageParoduct';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/User';
@@ -32,7 +33,7 @@ function App() {
           {/* <Route path='myOrder' element={<MyOrders></MyOrders>}></Route> */}
           <Route path='users' element={<Users></Users>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
-          {/* <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route> */}
+          <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
         </Route>
