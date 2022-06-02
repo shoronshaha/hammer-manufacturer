@@ -42,7 +42,7 @@ const AddProduct = () => {
 
             <div class="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
                 <div class="card-body  text-center">
-                    <h2 class="card-title font-bold text-2xl">Please Give Your Review</h2>
+                    <h2 class="card-title font-bold text-2xl text-center">Add Your Best Tools</h2>
                     <form onSubmit={handleSubmit}>
                         <input name='userName' value={user?.displayName} type="text" placeholder="Your userName" disabled class="my-2 input input-bordered input-warning w-full max-w-xs" />
                         <input name='email' value={user?.email} disabled type="email" placeholder="Your email" class="my-2 input input-bordered input-warning w-full max-w-xs" />

@@ -6,6 +6,7 @@ import './App.css';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageProduct from './Pages/Dashboard/ManageParoduct';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/User';
 import Home from './Pages/Home/Home/Home';
@@ -33,7 +34,7 @@ function App() {
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           {/* <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route> */}
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
-          {/* <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route> */}
+          <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
         </Route>
         <Route path='/tool/:toolId' element={
           <RequireAuth>
