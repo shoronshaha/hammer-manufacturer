@@ -6,8 +6,6 @@ import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
 
-
-
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
