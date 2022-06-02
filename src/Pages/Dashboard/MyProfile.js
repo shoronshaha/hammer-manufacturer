@@ -32,7 +32,7 @@ const MyProfile = () => {
     const navigate = useNavigate();
 
     const handleEditProfile = () => {
-        navigate("/edit-profile");
+        navigate("/editProfile");
     };
     return (
         <div>

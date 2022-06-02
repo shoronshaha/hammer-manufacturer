@@ -6,6 +6,7 @@ import './App.css';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import EditProfile from './Pages/Dashboard/EditProfile';
 import ManageAllOrders from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageParoduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
@@ -31,6 +32,8 @@ function App() {
           <RequireAuth><Dashboard /></RequireAuth>
         } >
           <Route index element={<MyProfile></MyProfile>}></Route>
+
+
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
@@ -38,6 +41,7 @@ function App() {
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
         </Route>
+        <Route path='editProfile' element={<EditProfile></EditProfile>}></Route>
         <Route path='/tool/:toolId' element={
           <RequireAuth>
             <ToolsDetails></ToolsDetails>
