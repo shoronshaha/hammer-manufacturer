@@ -45,7 +45,7 @@ const ManageAllOrders = () => {
                         </th>
 
                         <th scope="col" className="px-6 py-3">
-                            <span className="sr-only">Edit</span>
+                            <span>Edit</span>
                         </th>
                     </tr>
                 </thead>

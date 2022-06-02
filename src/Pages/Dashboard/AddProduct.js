@@ -40,21 +40,21 @@ const AddProduct = () => {
 
             <PageTitle title='AddProducts'></PageTitle>
 
-            <div class="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
-                <div class="card-body  text-center">
-                    <h2 class="card-title font-bold text-2xl text-center">Add Your Best Tools</h2>
+            <div className="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
+                <div className="card-body  text-center">
+                    <h2 className="card-title font-bold text-2xl text-center">Add Your Best Tools</h2>
                     <form onSubmit={handleSubmit}>
-                        <input name='userName' value={user?.displayName} type="text" placeholder="Your userName" disabled class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <input name='email' value={user?.email} disabled type="email" placeholder="Your email" class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <input name='name' type="text" placeholder="Your Product Name" class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <input name='price' type="number" placeholder="Your Product Price" class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <input name='ava_quantity' type="number" placeholder="Available_quantity " class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <input name='min_quantity' type="text" placeholder="Minimum_quantity" class="my-2 input input-bordered input-warning w-full max-w-xs" />
-                        <textarea name='description' class="my-2 textarea textarea-warning w-full" placeholder="Description"></textarea>
-                        <input name='image' type="text" placeholder="Give Image URL" class="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='userName' value={user?.displayName} type="text" placeholder="Your userName" disabled className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='email' value={user?.email} disabled type="email" placeholder="Your email" className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='name' type="text" placeholder="Your Product Name" className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='price' type="number" placeholder="Your Product Price" className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='ava_quantity' type="number" placeholder="Available_quantity " className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <input name='min_quantity' type="text" placeholder="Minimum_quantity" className="my-2 input input-bordered input-warning w-full max-w-xs" />
+                        <textarea name='description' className="my-2 textarea textarea-warning w-full" placeholder="Description"></textarea>
+                        <input name='image' type="text" placeholder="Give Image URL" className="my-2 input input-bordered input-warning w-full max-w-xs" />
 
-                        <div class="card-actions justify-end">
-                            <button type='submit' class="btn btn-primary my-2 w-full">ADD</button>
+                        <div className="card-actions justify-end">
+                            <button type='submit' className="btn btn-primary my-2 w-full">ADD</button>
                         </div>
                     </form>
                 </div>

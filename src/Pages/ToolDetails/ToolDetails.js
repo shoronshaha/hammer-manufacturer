@@ -26,6 +26,7 @@ const ToolsDetails = () => {
             productId: _id,
             productName: name,
             productImage: image,
+            price: price,
             name: event.target.name.value,
             email: event.target.email.value,
             quantity: event.target.quantity.value,
