@@ -1,7 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile';
@@ -30,7 +32,7 @@ function App() {
           <Route path='users' element={<Users></Users>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           {/* <Route path='manageOrders' element={<ManageAllOrders></ManageAllOrders>}></Route> */}
-          {/* <Route path='addProduct' element={<AddProduct></AddProduct>}></Route> */}
+          <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
           {/* <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route> */}
         </Route>
         <Route path='/tool/:toolId' element={
@@ -42,8 +44,8 @@ function App() {
         <Route path='/signUp' element={< SignUp />}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <ToastContainer></ToastContainer>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

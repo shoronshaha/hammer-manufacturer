@@ -37,11 +37,11 @@ const MyProfile = () => {
     return (
         <div>
             <h1 className="md:text-3xl font-bold uppercase text-center my-2">My Profile</h1>
-            <div class="flex flex-col w-full lg:flex-row justify-center md:mt-24">
+            <div className="flex flex-col w-full lg:flex-row justify-center md:mt-24">
 
-                <div class="grid card  rounded-box place-items-center my-5">
-                    <div class="avatar online">
-                        <div class="w-24 rounded-full">
+                <div className="grid card  rounded-box place-items-center my-5">
+                    <div className="avatar online">
+                        <div className="w-24 rounded-full">
                             <img src={
                                 user.photoURL
                                     ? user.photoURL
@@ -57,10 +57,10 @@ const MyProfile = () => {
                         : user?.displayName
                             ? user?.displayName
                             : "N/A"}</p>
-                    <button onClick={handleEditProfile} class="btn btn-outline btn-primary uppercase my-3">Edit Profile</button>
+                    <button onClick={handleEditProfile} className="btn btn-outline btn-primary uppercase my-3">Edit Profile</button>
                 </div>
-                <div class="divider lg:divider-horizontal"></div>
-                <div class="grid card rounded-box place-items-center">
+                <div className="divider lg:divider-horizontal"></div>
+                <div className="grid card rounded-box place-items-center">
                     <h1 className="text-center font-bold text-2xl uppercase" > Bio data</h1>
                     <div className="mt-[-50px]">
                         <p className="font-bold">Your Email:{authUser?.email}</p>
