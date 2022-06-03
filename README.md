@@ -8,6 +8,10 @@
 
 [https://calm-refuge-39895.herokuapp.com/](https://calm-refuge-39895.herokuapp.com/)
 
+## admin: 
+* smaranshaha@gmail.com
+* 123456
+## you create a user and check 
 ## Project Details
 
 * 2 types of sign-in methods (Email, Google).
