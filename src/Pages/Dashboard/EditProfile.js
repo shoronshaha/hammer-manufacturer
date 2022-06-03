@@ -3,6 +3,7 @@ import { useAuthState, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle';
 
 const EditProfile = () => {
     const [authUser] = useAuthState(auth);
@@ -125,6 +126,7 @@ const EditProfile = () => {
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
+                <PageTitle title='EditProfile'></PageTitle>
                 <div className="card-body  text-center">
                     <h2 className="card-title font-bold text-2xl text-center uppercase">Add Your Bio</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>

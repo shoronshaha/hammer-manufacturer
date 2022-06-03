@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import PageTitle from '../Shared/PageTitle';
 
 const ToolsDetails = () => {
     const { toolId } = useParams();
@@ -56,6 +57,7 @@ const ToolsDetails = () => {
     return (
 
         <div className="flex flex-col w-full lg:flex-row md:min-h-screen">
+            <PageTitle title='Tools Purchase'></PageTitle>
             <div className="grid flex-grow  card bg-base-100 rounded-box place-items-center">
                 <div className="card w-96 bg-base-100 shadow-xl">
 

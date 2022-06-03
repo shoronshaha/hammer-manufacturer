@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
+import PageTitle from '../Shared/PageTitle';
 
 
 
@@ -12,6 +13,7 @@ const Dashboard = () => {
     const [admin] = useAdmin(user);
     return (
         <div className="drawer drawer-mobile">
+            <PageTitle title='Dashboard-MyProfile'></PageTitle>
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <h2 className='text-2xl font-bold text-orange-500 text-center'>Welcome to your Dashboard</h2>

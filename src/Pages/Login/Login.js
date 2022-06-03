@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../Hooks/useToken';
 import Loading from '../Shared/Loading';
+import PageTitle from '../Shared/PageTitle';
 
 
 const Login = () => {
@@ -45,6 +46,7 @@ const Login = () => {
     return (
 
         <div className="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
+            <PageTitle title='Login'></PageTitle>
             <div className="card-body">
                 <h2 className="text-center text-2xl font-bold">Login</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>

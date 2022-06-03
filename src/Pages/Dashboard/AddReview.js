@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import ReactStars from "react-rating-stars-component";
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle';
 const AddReview = () => {
     const [user] = useAuthState(auth)
     const onSubmit = (event) => {
@@ -30,6 +31,7 @@ const AddReview = () => {
     };
     return (
         <div>
+            <PageTitle title='AddReview'></PageTitle>
             <div className="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center mt-10">
                 <div className="card-body  text-center">
                     <h2 className="card-title font-bold text-2xl">Please Give Your Review</h2>

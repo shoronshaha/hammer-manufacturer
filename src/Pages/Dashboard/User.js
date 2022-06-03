@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
+import PageTitle from '../Shared/PageTitle';
 import UserRow from './UserRow';
 
 
@@ -17,6 +18,7 @@ const Users = () => {
     }
     return (
         <div className="lg:m-15 md:m-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+            <PageTitle title='Make Admin'></PageTitle>
             <h2 className="text-2xl text-center font-bold">All Users: {users.length}</h2>
 
             <table className="w-full text-sm text-left text-gray-500 dark:text-black ">

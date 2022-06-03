@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
+import PageTitle from "../Shared/PageTitle";
 
 
 const SignUp = () => {
@@ -44,6 +45,7 @@ const SignUp = () => {
     return (
 
         <div className="card w-96 bg-base-100 shadow-xl mx-auto justify-center items-center">
+            <PageTitle title='SignUP'></PageTitle>
             <div className="card-body">
                 <h2 className="text-center text-2xl font-bold">Sign Up</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
