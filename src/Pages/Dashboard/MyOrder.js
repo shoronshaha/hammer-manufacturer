@@ -50,7 +50,7 @@ const MyOrder = () => {
     }
     return (
         <div className="lg:m-15 md:m-10 relative overflow-x-auto shadow-md sm:rounded-lg">
-            <h2>My Orders: {orders.length}</h2>
+            <h2 className='text-center text-2xl font-bold'>My Orders: {orders.length}</h2>
             <table className="w-full text-sm text-left text-gray-500 dark:text-black ">
                 <thead className="text-xs text-black uppercase bg-gray-50 dark:bg-black dark:text-white">
                     <tr>

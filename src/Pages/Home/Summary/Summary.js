@@ -34,7 +34,7 @@ const Summary = () => {
         <div>
             <div className='mt-24 '>
                 <div className='text-center mb-10 '>
-                    <h2 className='text-primary lg:text-4xl sm:text-2xl font-bold uppercase'>millions business trust us</h2>
+                    <h2 className='text-blue-500 lg:text-4xl sm:text-2xl font-bold uppercase'>millions business trust us</h2>
                     <h2 className='lg:text-2xl sm:text-xl uppercase'>Try to understand users expectation</h2>
                 </div>
                 <div className='grid sm:grid-cols-1 lg:grid-cols-4 gap-12 justify-items-center'>

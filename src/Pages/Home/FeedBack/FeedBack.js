@@ -3,7 +3,7 @@ const FeedBack = () => {
     return (
 
         <div>
-            <h1 className='text-[4vw] text-center font-bold'>REQUEST A QUICK QUOTE</h1>
+            <h1 className='md:text-[3vw] text-center font-bold text-blue-500'>REQUEST A QUICK QUOTE</h1>
             <p className='text-center'>We love to listen and we are eagerly waiting to talk to you regarding your project.<br /> Get in touch with us if you have any queries and we will get back to you as soon as possible</p>
             <form className=" md:mx-24 mt-10 bg-white py-5 ">
                 <div className="flex flex-wrap mb-6">

@@ -57,7 +57,7 @@ const Testimonial = () => {
 
 
         <div className=' my-10'>
-            <h1 className='md:text-[4vw] font-bold text-center'>TESTIMONIAL</h1>
+            <h1 className='md:text-[3vw] font-bold text-center text-blue-500'>TESTIMONIAL</h1>
             <Slider  {...settings}>
 
                 {
@@ -66,7 +66,7 @@ const Testimonial = () => {
                             <div key={testimonial._id} className='px-4 pt-5 pb-10 mx-auto max-w-7xl md:px-2'>
 
                                 <div className='grid grid-cols-1 justify-items-center'>
-                                    <div className='rounded-lg shadow-lg bg-gray-100 max-w-sm-[2rem] p-5 h-[400px] hover:bg-blue-50 mx-2 my-3'>
+                                    <div className='rounded-lg shadow-lg bg-orange-100 max-w-sm-[2rem] p-5 h-[400px] hover:bg-blue-50 mx-2 my-3'>
                                         <div className='flex rounded-full w-[100px]'>
                                             <img className='rounded-full' src={testimonial.img} alt="" />
                                             <h1 className='text-2xl text-center p-5'>{testimonial.name}</h1>

@@ -10,7 +10,7 @@ const ToolProduct = () => {
     }
     return (
         <div>
-            <h1 className='sm:text-[4vw] md:text-3xl text-center font-bold my-3 '>HAMMER COLLECTION</h1>
+            <h1 className='sm:text-[4vw] md:text-3xl text-center font-bold my-5 text-blue-500'>HAMMER COLLECTION</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 sm:gird-cols-2 justify-items-center gap-8'>
 
                 {
