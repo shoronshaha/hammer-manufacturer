@@ -13,7 +13,7 @@ const ToolsDetails = () => {
     console.log(user);
 
     useEffect(() => {
-        const url = `http://localhost:5000/tool/${toolId}`;
+        const url = `https://calm-refuge-39895.herokuapp.com/tool/${toolId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data));
@@ -35,7 +35,7 @@ const ToolsDetails = () => {
         }
         console.log(data);
 
-        const url = `http://localhost:5000/orders`;
+        const url = `https://calm-refuge-39895.herokuapp.com/orders`;
         fetch(url, {
             method: 'POST',
             headers: {

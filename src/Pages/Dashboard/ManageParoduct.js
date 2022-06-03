@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [allTools, setAllTools] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allTool`)
+        fetch(`https://calm-refuge-39895.herokuapp.com/allTool`)
             .then(res => res.json())
             .then(data => setAllTools(data))
     }, []);
@@ -14,7 +14,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/allTool/${id}`;
+            const url = `https://calm-refuge-39895.herokuapp.com/allTool/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

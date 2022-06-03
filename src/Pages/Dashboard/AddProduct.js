@@ -26,7 +26,7 @@ const AddProduct = () => {
             description: event.target.description.value,
             image: event.target.image.value,
         };
-        await axios.post('http://localhost:5000/addProduct', addProduct)
+        await axios.post('https://calm-refuge-39895.herokuapp.com/addProduct', addProduct)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

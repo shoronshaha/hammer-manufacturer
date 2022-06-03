@@ -11,7 +11,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/userOrder?email=${user.email}`, {
+            fetch(`https://calm-refuge-39895.herokuapp.com/userOrder?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const MyOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/allOrder/${id}`;
+            const url = `https://calm-refuge-39895.herokuapp.com/allOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

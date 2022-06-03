@@ -12,7 +12,7 @@ const EditProfile = () => {
     console.log(user);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${authUser?.email}`, {
+        fetch(`https://calm-refuge-39895.herokuapp.com/user/${authUser?.email}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const EditProfile = () => {
                         };
                         console.log(userInfo);
                         fetch(
-                            `http://localhost:5000/update/user/${authUser.email}`,
+                            `https://calm-refuge-39895.herokuapp.com/update/user/${authUser.email}`,
                             {
                                 method: "PUT",
                                 headers: {
@@ -94,7 +94,7 @@ const EditProfile = () => {
             };
             console.log(userInfo);
             fetch(
-                `http://localhost:5000/update/user/${authUser.email}`,
+                `https://calm-refuge-39895.herokuapp.com/update/user/${authUser.email}`,
                 {
                     method: "PUT",
                     headers: {
