@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import PageTitle from "../Shared/PageTitle";
 
 
 const MyProfile = () => {
@@ -36,6 +37,7 @@ const MyProfile = () => {
     };
     return (
         <div>
+            <PageTitle title='MyProfile'></PageTitle>
             <h1 className="md:text-3xl font-bold uppercase text-center my-2">My Profile</h1>
             <div className="flex flex-col w-full lg:flex-row justify-center md:mt-24">
 

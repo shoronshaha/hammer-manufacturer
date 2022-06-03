@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import icon from '../../Images/icons/delete.png'
+import PageTitle from '../Shared/PageTitle';
 
 const MyOrder = () => {
     const [user] = useAuthState(auth)
@@ -50,6 +51,7 @@ const MyOrder = () => {
     }
     return (
         <div className="lg:m-15 md:m-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+            <PageTitle title='MyOrder'></PageTitle>
             <h2 className='text-center text-2xl font-bold'>My Orders: {orders.length}</h2>
             <table className="w-full text-sm text-left text-gray-500 dark:text-black ">
                 <thead className="text-xs text-black uppercase bg-gray-50 dark:bg-black dark:text-white">

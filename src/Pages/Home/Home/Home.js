@@ -1,4 +1,5 @@
 import React from 'react';
+import PageTitle from '../../Shared/PageTitle';
 import Banner from '../Banner/Banner';
 import Carousel from '../Carousel/Carousel';
 import FeedBack from '../FeedBack/FeedBack';
@@ -9,6 +10,7 @@ import ToolProduct from '../ToolProduct/ToolProduct';
 const Home = () => {
     return (
         <div>
+            <PageTitle title='Home'></PageTitle>
             <Banner></Banner>
             <ToolProduct></ToolProduct>
             <Carousel></Carousel>
