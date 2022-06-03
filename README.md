@@ -11,7 +11,9 @@
 ## admin: 
 * smaranshaha@gmail.com
 * 123456
-## you create a user and check 
+## you create a user and check or 
+* zorroofficialgaming@gmail.com
+* 123456
 ## Project Details
 
 * 2 types of sign-in methods (Email, Google).
